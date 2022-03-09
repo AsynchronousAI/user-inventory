@@ -58,7 +58,7 @@ localhost:3000/users/18982229/can-view-inventory/
 
 ### GET /users/{USER_ID}/clothing/
 
-Returns a list containing all presently on sale clothing (id and price) creaeted by the user. Might be preferential to use `/clothing/{USER_NAME}/
+Returns a list containing all presently on sale clothing (id and price) creaeted by the user. Might be preferential to use `/clothing/{USER_NAME}/`
 
 #### Request:
 
