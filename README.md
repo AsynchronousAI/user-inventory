@@ -58,7 +58,7 @@ localhost:3000/v1/users/18982229/can-view-inventory/
 
 ### GET /v1/users/{USER_ID}/clothing/
 
-Returns a list containing all presently on sale clothing (id and price) creaeted by the user. Might be preferential to use `/clothing/{USER_NAME}/`
+Returns a list containing all presently on sale clothing (id and price) creaeted by the user. Might be preferential to use `/v1/clothing/{USER_NAME}/`
 
 #### Request:
 
@@ -110,7 +110,7 @@ localhost:3000/v1/users/18982229/gamepasses
 
 Returns a list containing all presently on sale clothing (id and price) creaeted by the user.
 
-Same as `/users/{USER_ID}/clothing`, but uses one less API call since you don't have to turn `USER_ID` into `USER_NAME`.
+Same as `/v1/users/{USER_ID}/clothing`, but uses one less API call since you don't have to turn `USER_ID` into `USER_NAME`.
 
 #### Request:
 
