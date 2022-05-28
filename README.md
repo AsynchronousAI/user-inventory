@@ -2,14 +2,14 @@
 
 ## Users
 
-### GET /users/{USER_ID}/
+### GET /v1/users/{USER_ID}/
 
 Returns information about a user and their inventory. Will return lists containing all presently on sale clothing/gamepasses (id and price) creaeted by the user.
 
 #### Request:
 
 ```
-localhost:3000/users/18982229/
+localhost:3000/v1/users/18982229/
 ```
 
 #### Response:
@@ -37,14 +37,14 @@ localhost:3000/users/18982229/
 }
 ```
 
-### GET /users/{USER_ID}/can-view-inventory/
+### GET /v1/users/{USER_ID}/can-view-inventory/
 
 Returns a boolean showing whether or not the users inventory is publicly viewable.
 
 #### Request:
 
 ```
-localhost:3000/users/18982229/can-view-inventory/
+localhost:3000/v1/users/18982229/can-view-inventory/
 ```
 
 #### Response:
@@ -56,14 +56,14 @@ localhost:3000/users/18982229/can-view-inventory/
 ```
 
 
-### GET /users/{USER_ID}/clothing/
+### GET /v1/users/{USER_ID}/clothing/
 
-Returns a list containing all presently on sale clothing (id and price) creaeted by the user. Might be preferential to use `/clothing/{USER_NAME}/`
+Returns a list containing all presently on sale clothing (id and price) creaeted by the user. Might be preferential to use `/v1/clothing/{USER_NAME}/`
 
 #### Request:
 
 ```
-localhost:3000/users/18982229/clothing
+localhost:3000/v1/users/18982229/clothing
 ```
 
 #### Response:
@@ -82,14 +82,14 @@ localhost:3000/users/18982229/clothing
 ```
 
 
-### GET /users/{USER_ID}/gamepasses/
+### GET /v1/users/{USER_ID}/gamepasses/
 
 Returns a list containing all presently on sale gamepasses (id and price) creaeted by the user.
 
 #### Request:
 
 ```
-localhost:3000/users/18982229/gamepasses
+localhost:3000/v1/users/18982229/gamepasses
 ```
 
 #### Response:
@@ -106,16 +106,16 @@ localhost:3000/users/18982229/gamepasses
 
 ## Clothing
 
-### GET /clothing/{USER_NAME}/
+### GET /v1/clothing/{USER_NAME}/
 
 Returns a list containing all presently on sale clothing (id and price) creaeted by the user.
 
-Same as `/users/{USER_ID}/clothing`, but uses one less API call since you don't have to turn `USER_ID` into `USER_NAME`.
+Same as `/v1/users/{USER_ID}/clothing`, but uses one less API call since you don't have to turn `USER_ID` into `USER_NAME`.
 
 #### Request:
 
 ```
-localhost:3000/clothing/Scarious/
+localhost:3000/v1/clothing/Scarious/
 ```
 
 #### Response:
@@ -135,16 +135,16 @@ localhost:3000/clothing/Scarious/
 
 ## Gamepasses
 
-### GET /gamepasses/{USER_ID}/
+### GET /v1/gamepasses/{USER_ID}/
 
 Returns a list containing all presently on sale gamepasses (id and price) creaeted by the user.
 
-Same as `/users/{USER_ID}/gamepasses/`.
+Same as `/v1/users/{USER_ID}/gamepasses/`.
 
 #### Request:
 
 ```
-localhost:3000/gamepasses/18982229/
+localhost:3000/v1/gamepasses/18982229/
 ```
 
 #### Response:
