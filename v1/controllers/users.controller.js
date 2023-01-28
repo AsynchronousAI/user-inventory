@@ -37,6 +37,7 @@ async function fetchGamepasses(userID) {
 						gamepasses.push({
 							"ID": item.Item.AssetId,
 							"Price": item.Product.PriceInRobux,
+							"Created": true
 						});
 					}else if (item.Product.IsForSale == true) {
 						gamepasses.push({
