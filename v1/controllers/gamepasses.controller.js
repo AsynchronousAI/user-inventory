@@ -30,10 +30,17 @@ async function getGamepasses(req, res) {
 				const items = data.Items
 
 				items.forEach((item) => {
-					if (item.Creator.Id == userID && item.Product.IsForSale == true) {
+					if (item.Creator.Id == userID && item.Product.IsForSale == true) { // point of checking add
 						gamepasses.push({
 							"ID": item.Item.AssetId,
 							"Price": item.Product.PriceInRobux,
+							"Created": true
+						});
+					}else if (item.Product.IsForSale == true) {
+						gamepasses.push({
+							"ID": item.Item.AssetId,
+							"Price": item.Product.PriceInRobux,
+							"Created": false
 						});
 					}
 				})

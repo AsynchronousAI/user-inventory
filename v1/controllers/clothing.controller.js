@@ -9,7 +9,7 @@ function getClothing(req, res) {
 
 	// proxy request to Roblox, and return data
 	axios
-		.get(`https://catalog.roblox.com/v1/search/items/details?Category=3&Sort=3&Limit=30&CreatorName=${username}`)
+		.get(`https://catalog.roblox.com/v1/search/items/details?Category=3&Sort=3&Limit=30&CreatorName=${username}`) // point of checking if owned
 		.then(robloxRes => {
 			const clothing = [];
 			const items = robloxRes.data.data;
@@ -18,6 +18,7 @@ function getClothing(req, res) {
 				clothing.push({
 					"ID": item.id,
 					"Price": item.price, 
+					"Created": true
 				});
 			});
 
